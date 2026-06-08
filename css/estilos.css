@@ -242,7 +242,7 @@ h2{
 
 .bio-image img{
     width:100%;
-    max-height:500px;
+    max-height:630px;
     object-fit:cover;
 
     border:1px solid #333;
@@ -541,44 +541,148 @@ button:hover{
     background:#d60000;
 }
 
+
 /* ==========================
-   FOOTER
+    FOOTER
 ========================== */
 
 footer{
 
-    background:black;
+    background:#050505;
 
     border-top:1px solid #222;
 
-    padding:40px;
+    padding:25px 40px;
 }
 
-.footer-grid{
+.footer-content{
 
-    display:grid;
+    max-width:1400px;
 
-    grid-template-columns:
-    1fr 1fr 1fr;
+    margin:auto;
+
+    display:flex;
+
+    justify-content:space-between;
 
     align-items:center;
 
-    text-align:center;
+    gap:30px;
 }
 
 .footer-logo{
-    width:260px;
-    max-width:100%;
+
+    width:160px;
 
     filter:
-    drop-shadow(0 0 10px rgba(255,255,255,.15));
+    drop-shadow(0 0 8px rgba(255,255,255,.10));
+
+    transition:.3s;
+}
+.footer-logo:hover{
+
+    transform:scale(1.05);
 }
 
-footer p{
+.footer-info{
 
-    font-family:Georgia, serif;
+    flex:1;
 }
 
+.footer-info h3{
+
+    font-size:1.8rem;
+
+    color:white;
+
+    margin-bottom:5px;
+
+    letter-spacing:2px;
+}
+
+.footer-info p{
+
+    color:#999;
+
+    font-family:Arial, sans-serif;
+
+    font-size:.9rem;
+}
+
+.footer-social{
+
+    display:flex;
+
+    gap:20px;
+}
+
+.footer-social a{
+
+    text-decoration:none;
+
+    color:#999;
+
+    transition:.3s;
+
+    font-size:1rem;
+}
+
+.footer-social a:hover{
+
+    color:#d60000;
+}
+.footer-social a{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    text-decoration:none;
+
+    color:#999;
+
+    transition:.3s;
+
+    font-size:1rem;
+}
+
+.footer-social i{
+
+    font-size:1.3rem;
+}
+
+.footer-social a:hover{
+
+    color:#d60000;
+
+    transform:translateY(-2px);
+}
+
+/* ==========================
+   FOOTER MOBILE
+========================== */
+
+@media(max-width:768px){
+
+    .footer-content{
+
+        flex-direction:column;
+
+        text-align:center;
+    }
+
+    .footer-social{
+
+        justify-content:center;
+    }
+
+    .footer-logo{
+
+        width:75px;
+    }
+}
 /* ==========================
    WHATSAPP
 ========================== */
