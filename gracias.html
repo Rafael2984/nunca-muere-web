@@ -1,21 +1,135 @@
 <!-- gracias.html -->
 
+```html
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
 <meta charset="UTF-8">
-<title>Mensaje enviado</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mensaje Enviado | Nunca Muere</title>
+
+<link rel="stylesheet" href="css/estilos.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+<style>
+
+.gracias-container{
+
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,.75),
+        rgba(0,0,0,.90)
+    ),
+    url('img/spoty2.jpg');
+
+    background-size:cover;
+    background-position:center;
+
+    padding:40px;
+}
+
+.gracias-box{
+
+    background:rgba(0,0,0,.75);
+
+    border:1px solid #333;
+
+    padding:50px;
+
+    max-width:700px;
+
+    backdrop-filter:blur(5px);
+}
+
+.gracias-logo{
+
+    width:250px;
+
+    margin-bottom:25px;
+}
+
+.gracias-box h1{
+
+    font-size:4rem;
+
+    color:#d60000;
+
+    margin-bottom:20px;
+}
+
+.gracias-box p{
+
+    font-family:Georgia, serif;
+
+    font-size:1.2rem;
+
+    line-height:1.8;
+
+    margin-bottom:30px;
+}
+
+.btn-volver{
+
+    display:inline-block;
+
+    padding:15px 35px;
+
+    border:2px solid #d60000;
+
+    color:white;
+
+    text-decoration:none;
+
+    transition:.3s;
+}
+
+.btn-volver:hover{
+
+    background:#d60000;
+}
+
+</style>
+
 </head>
 
 <body>
 
-<h1>¡Gracias por contactarte!</h1>
+<div class="gracias-container">
 
-<p>Tu mensaje fue enviado correctamente.</p>
+    <div class="gracias-box">
 
-<a href="index.html">
-Volver al sitio
-</a>
+        <img src="img/logo.png"
+             alt="Nunca Muere"
+             class="gracias-logo">
+
+        <h1>MENSAJE ENVIADO</h1>
+
+        <p>
+            Gracias por contactarte con Nunca Muere.
+            Recibimos tu mensaje correctamente y te responderemos
+            a la brevedad.
+        </p>
+
+        <a href="index.html" class="btn-volver">
+            VOLVER AL SITIO
+        </a>
+
+    </div>
+
+</div>
 
 </body>
 </html>
+```
