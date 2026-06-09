@@ -155,13 +155,16 @@ header{
     background:#d60000;
 }
 
-.btn-dark{
-
-    border:2px solid #666;
-
-    color:white;
+.spotify-link{
+    display:flex;
+    justify-content:center;
+    margin-top:20px;
+    margin-bottom:20px;
 }
 
+.spotify-link .btn-dark{
+    display:inline-block;
+}
 .btn-dark:hover{
 
     background:white;
