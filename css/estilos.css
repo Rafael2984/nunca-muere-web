@@ -788,4 +788,10 @@ footer{
         font-size:1.2rem;
     }
 }
-
+#estadoFormulario{
+    margin-top:20px;
+    color:#ff2a2a;
+    font-family:'Bebas Neue',sans-serif;
+    font-size:24px;
+    letter-spacing:2px;
+}

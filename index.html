@@ -263,12 +263,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
             </form>-->
 
-        <form action="https://formspree.io/f/xwvjbpoy" method="POST">
-
-    <input
-        type="hidden"
-        name="_next"
-        value="https://nunca-muere-web.rafaelgsaravia.workers.dev/gracias.html">
+        <form id="contactForm">
 
     <input
         type="text"
@@ -292,6 +287,8 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     </button>
 
 </form>
+
+<div id="estadoFormulario"></div>
 
         </section>
 
@@ -349,7 +346,50 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         💬
 
     </a>
+<script>
 
+document.getElementById("contactForm").addEventListener("submit", async function(e){
+
+    e.preventDefault();
+
+    const form = e.target;
+
+    const datos = new FormData(form);
+
+    try{
+
+        const respuesta = await fetch(
+            "https://formspree.io/f/xwvjbpoy",
+            {
+                method: "POST",
+                body: datos,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }
+        );
+
+        if(respuesta.ok){
+
+            window.location.href = "gracias.html";
+
+        }else{
+
+            document.getElementById("estadoFormulario").innerHTML =
+                "Error al enviar el mensaje.";
+
+        }
+
+    }catch(error){
+
+        document.getElementById("estadoFormulario").innerHTML =
+            "No se pudo conectar con el servidor.";
+
+    }
+
+});
+
+</script>
 </body>
 
 </html>
