@@ -42,7 +42,21 @@ body{
 
     z-index:9999;
 }
+.menu-toggle{
+    display:none;
+    flex-direction:column;
+    gap:5px;
+    background:none;
+    border:none;
+    cursor:pointer;
+}
 
+.menu-toggle span{
+    width:30px;
+    height:3px;
+    background:#ff0000;
+    display:block;
+}
 .logo-nav{
     font-size:2rem;
     color:#fff;
@@ -772,38 +786,40 @@ footer{
 @media(max-width:768px){
 
     .navbar{
+        justify-content:space-between;
+        flex-wrap:wrap;
+    }
 
-        flex-direction:column;
-
-        gap:15px;
+    .menu-toggle{
+        display:flex;
     }
 
     .navbar ul{
+        display:none;
+        width:100%;
+        flex-direction:column;
+        text-align:center;
+        gap:20px;
+        padding:20px 0;
+    }
 
-        flex-wrap:wrap;
+    .navbar ul.active{
+        display:flex;
+    }
 
-        justify-content:center;
+    .social-nav{
+        display:none;
     }
 
     section{
-
         padding:40px 20px;
     }
 
     h2{
-
         font-size:2rem;
     }
 
     .slogan{
-
         font-size:1.2rem;
     }
-}
-#estadoFormulario{
-    margin-top:20px;
-    color:#ff2a2a;
-    font-family:'Bebas Neue',sans-serif;
-    font-size:24px;
-    letter-spacing:2px;
 }

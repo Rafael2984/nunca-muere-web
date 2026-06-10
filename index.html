@@ -28,7 +28,13 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
             NUNCA MUERE
         </div>
 
-        <ul>
+        <button class="menu-toggle" id="menu-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+</button>
+
+<ul id="nav-menu">
 
             <li><a href="#inicio">Inicio</a></li>
             <li><a href="#bio">Biografía</a></li>
@@ -348,6 +354,18 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         💬
 
     </a>
+
+    <script>
+
+const menuToggle = document.getElementById('menu-toggle');
+const navMenu = document.getElementById('nav-menu');
+
+menuToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+});
+
+</script>
+
 <script>
 
 document.getElementById("contactForm").addEventListener("submit", async function(e){
