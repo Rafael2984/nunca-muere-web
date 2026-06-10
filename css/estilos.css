@@ -109,10 +109,7 @@ header{
     text-align:center;
 }
 
-.hero{
-    padding:20px;
-     margin-top: 500px;
-}
+
 
 .logo-central{
 
@@ -750,6 +747,8 @@ footer{
 
 @media(max-width:900px){
 
+    
+
     .contenedor-doble{
 
         grid-template-columns:1fr;
@@ -822,4 +821,16 @@ footer{
     .slogan{
         font-size:1.2rem;
     }
+}
+@media(max-width:768px){
+
+    header{
+        background-image:
+        linear-gradient(
+            rgba(0,0,0,.45),
+            rgba(0,0,0,.75)
+        ),
+        url('../img/mobile-hero.png');
+    }
+
 }
