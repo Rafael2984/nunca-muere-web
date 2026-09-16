@@ -400,6 +400,101 @@ h2{
 }
 
 /* ==========================
+   MERCH
+========================== */
+
+#merch{
+
+    padding:70px;
+
+    border-top:1px solid #222;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,.90),
+        rgba(0,0,0,.90)
+    ),
+    url('../img/textura.jpg');
+
+    background-size:cover;
+}
+
+.merch-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:25px;
+}
+
+.merch-card{
+
+    background:#111;
+
+    border:1px solid #333;
+
+    padding:20px;
+
+    text-align:center;
+
+    transition:.3s;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+}
+
+.merch-card:hover{
+
+    border-color:#d60000;
+}
+
+.merch-img{
+
+    width:100%;
+
+    margin-bottom:20px;
+}
+
+.merch-img img{
+
+    width:100%;
+
+    height:320px;
+
+    object-fit:cover;
+
+    border:1px solid #333;
+}
+
+.merch-card h3{
+
+    font-size:1.8rem;
+
+    margin-bottom:8px;
+}
+
+.merch-precio{
+
+    font-family:Georgia, serif;
+
+    color:#d60000;
+
+    font-size:1.3rem;
+
+    margin-bottom:20px;
+}
+
+.merch-card .btn-red{
+
+    width:100%;
+}
+
+/* ==========================
    GALERIA
 ========================== */
 
@@ -474,11 +569,46 @@ h2{
     text-align:center;
 
     transition:.3s;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:25px;
 }
 
 .show-card:hover{
 
     border-color:#d60000;
+}
+
+.show-info{
+
+    flex:1;
+
+    text-align:left;
+}
+
+.show-flyer{
+
+    flex-shrink:0;
+
+    width:140px;
+}
+
+.show-flyer img{
+
+    width:100%;
+
+    height:180px;
+
+    object-fit:cover;
+
+    border:1px solid #333;
+
+    display:block;
 }
 
 .dia{
@@ -764,6 +894,11 @@ footer{
         grid-template-columns:1fr;
     }
 
+    .merch-grid{
+
+        grid-template-columns:1fr;
+    }
+
     .shows-grid{
 
         grid-template-columns:1fr;
@@ -822,6 +957,24 @@ footer{
         font-size:1.2rem;
     }
 }
+@media(max-width:768px){
+
+    .show-card{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .show-info{
+        text-align:center;
+    }
+
+    .show-flyer{
+        width:100%;
+        max-width:220px;
+    }
+
+}
+
 @media(max-width:768px){
 
     header{
