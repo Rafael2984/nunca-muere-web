@@ -97,7 +97,7 @@ header{
         rgba(0,0,0,.45),
         rgba(0,0,0,.75)
     ),
-    url('../img/spoty2.jpg');
+    url('../img/nunca1.jpg');
 
     background-size:cover;
     background-position:center;
@@ -107,6 +107,10 @@ header{
     align-items:center;
 
     text-align:center;
+}
+
+.hero{
+    transform:translateY(180px);
 }
 
 
@@ -955,6 +959,10 @@ footer{
 
     .slogan{
         font-size:1.2rem;
+    }
+
+    .hero{
+        transform:translateY(90px);
     }
 }
 @media(max-width:768px){
